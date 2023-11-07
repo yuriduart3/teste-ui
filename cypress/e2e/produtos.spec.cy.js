@@ -26,4 +26,12 @@ describe('Funcionalidade Página de Produtos', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain' , quantidade)
         cy.get('.woocommerce-message').should('contain' , quantidade + ' × “Abominable Hoodie” foram adicionados no seu carrinho.')
     });
+
+    it('Deve adicionar produtos ao carrinho - usando Comandos Customizado', () => {
+        cy.addProdutos('L', 'Blue', 2)
+    });
+
+    it('Deve adicionar produtos ao carrinho - usando Comandos Customizado', () => {
+        cy.addProdutos('XS', 'Red', 3)
+    });
 });
